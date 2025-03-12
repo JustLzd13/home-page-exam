@@ -1,1 +1,172 @@
-style
+/* Apply to the entire website */
+body {
+    font-family: 'Cinzel', serif;
+}
+
+/* Make headings stand out */
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700; /* Bold and impactful */
+}
+
+/* Navbar Styling */
+.navbar-brand, .navbar-nav .nav-link {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    text-transform: uppercase; /* Adds a strong, bold effect */
+}
+
+/* Hero Section */
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Buttons */
+.btn {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#carouselTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+.hero-section {
+    position: relative;
+    background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/91c64743-70df-48d8-bc46-032dcb781164/dj0fhdk-7b73f782-3c45-44c5-8dd0-4316ca60b8d3.png/v1/fill/w_800,h_800,q_80,strp/maliss_in_the_mirror_artwork_by_d_evil6661_dj0fhdk-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODAwIiwicGF0aCI6IlwvZlwvOTFjNjQ3NDMtNzBkZi00OGQ4LWJjNDYtMDMyZGNiNzgxMTY0XC9kajBmaGRrLTdiNzNmNzgyLTNjNDUtNDRjNS04ZGQwLTQzMTZjYTYwYjhkMy5wbmciLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.bbPCCxqSKgdT1tDN_QjWaz_-dKhN13ncl97inFph9hg') 
+    no-repeat top center/cover;
+    color: white;
+    text-align: center;
+    padding: 240px 20px;
+    position: relative;
+}
+
+/* Dark overlay */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust darkness */
+    z-index: 1;
+}
+
+/* Ensure text and button stay on top */
+.hero-section h1,
+.hero-section p,
+.hero-btn {
+    position: relative;
+    z-index: 2;
+}
+
+/* Button styling */
+.hero-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.card-img-top {
+    height: 300px; /* Set a fixed height for uniform size */
+    object-fit: cover; /* Ensures images maintain aspect ratio and cover the space */
+}
+
+#shop p {
+    text-align: center; /* Centers the paragraph text */
+    font-size: 18px; /* Optional: Adjust font size for better readability */
+    margin-bottom: 20px; /* Optional: Adds spacing below */
+}
+
+/* Card Button Styling */
+.card .btn {
+    background-color: #343a40; /* Dark gray color */
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card .btn:hover {
+    background-color: #212529; /* Even darker gray on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+#heroCarousel {
+    max-width: 100%; /* Full width */
+    height: auto; /* Automatically adjusts height */
+    margin: 0 auto; /* Centers the carousel */
+    overflow: hidden; /* Ensures no overflow issues */
+}
+
+#heroCarousel .carousel-item img {
+    width: 100%; /* Makes sure the image takes full width */
+    height: 500px; /* Ensures uniform height */
+    object-fit: contain; /* Ensures the entire image is shown without cropping */
+    object-position: center; /* Centers the image */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+
+/* Adjust hero section padding */
+.hero-section {
+    padding: 50px 20px; /* Reduce padding */
+}
+
+/* Mini Navbar Styling */
+.mini-navbar {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Links inside Mini Navbar */
+.mini-navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.mini-navbar a:hover {
+    color: #ffcc00;
+}
+
+/* When screen is smaller, make navbar larger */
+@media (max-width: 768px) {
+    .mini-navbar {
+        padding: 12px;
+    }
+    .mini-navbar a {
+        font-size: 16px;
+    }
+    #heroCarousel .carousel-item img {
+        height: 300px; /* Reduce height for mobile */
+        object-fit: contain; /* Maintain full image view */
+    }
+}
+
